@@ -28,10 +28,10 @@ con.connect(function (err) {
 
 const mysql = require('mysql');
 const pool = mysql.createPool({
-    host            : 'remotemysql.com',
-    user            : 'merPpxv9vl',
-    password        : 'ehty9VG9ki',
-    database        : 'merPpxv9vl',
+    host            : 'webitcloud.net',
+    user            : 'database',
+    password        : 'YBioxV&OUaL7',
+    database        : 'database',
     connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
     multipleStatements : true           // I like this because it helps prevent nested sql statements, it can be buggy though, so be careful
 });
