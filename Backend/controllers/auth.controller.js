@@ -1,5 +1,6 @@
 const jsonMessagesPath = __dirname + "/../assets/jsonMessages/";
 const jsonMessages = require(jsonMessagesPath + "login");
+const dePAULA = "igual a do preto mas caucasiana";
 
 var exports = module.exports = {};
 exports.signup = function(req, res) {
