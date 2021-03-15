@@ -1,37 +1,48 @@
+const mysql = require('mysql');
+module.exports = {
+con: mysql.createConnection({
+host: 'webitcloud.net',
+user: 'webitclo_rdprofile',
+password: 'HM?g6mq.ye5)',
+database: 'webitclo_rdprofile'
+})
+};
+
 
 
 /*
 var mysql = require('mysql')
 var con = mysql.createConnection({
-    host: 'remotemysql.com',
-    user: 'merPpxv9vl',
-    password: 'ehty9VG9ki',
-    database: 'merPpxv9vl',
+    host: 'webitcloud.net',
+    user: 'webitclo_rdprofile',
+    password: 'HM?g6mq.ye5)',
+    database: 'webitclo_rdprofile',
     queueLimit : 0, // unlimited queueing
     connectionLimit : 0 // unlimited connections
 });
-*/
 
-/*
+
+
 con.connect(function (err) {
     if (err) throw err;
     console.log("Connected!");
 });
 
-*/
-
-//connection.end()
 
 
 
 
 
+
+
+
+/*
 const mysql = require('mysql');
 const pool = mysql.createPool({
     host            : 'webitcloud.net',
-    user            : 'database',
-    password        : 'YBioxV&OUaL7',
-    database        : 'database',
+    user            : 'webitclo_rdprofile',
+    password        : 'HM?g6mq.ye5)',
+    database        : 'webitclo_rdprofile',
     connectionLimit : 10,               // this is the max number of connections before your pool starts waiting for a release
     multipleStatements : true           // I like this because it helps prevent nested sql statements, it can be buggy though, so be careful
 });
