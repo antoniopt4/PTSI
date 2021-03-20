@@ -19,6 +19,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<script src="js/jquery.min.js"></script>
 	
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -73,7 +74,7 @@
               <a href="book-ride.html"> <button class="btn btn" id="btnReg" style="margin-right: 200px; background-color:#176585; color:white;">Registar</button></a>
 
                                
-                                <button type="submit" class="btn btn" id="btnCanc" onclick="hide()" required style="background-color:#176585; color:white">Cancelar</button>
+                                <button type="submit" class="btn btn" id="btnGoogle" onclick="hide()" required style="background-color:#176585; color:white">Cancelar</button>
                                 <button type="button" class="btn btn" id="btnLog" required style="background-color:#176585; color:white">Log In</button>
 
                                 <script>
@@ -956,6 +957,49 @@
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+	<script>
+
+        console.log("Script");
+
+        const btnLogin = document.getElementById("btnLog")
+        $(".modal-backdrop").remove();
+        $( "#btnLog" ).on( "click", function() {
+            console.log("...");
+            var data = {};
+            data.email = document.getElementById("email").value;
+            data.password = document.getElementById("password").value;
+
+            fetch('http://localhost:8080/signin', {
+                headers: { 'Content-Type': 'application/json' },
+                method: 'POST',
+                body: JSON.stringify(data)
+            }).then(response => {
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+                return response.json();
+            }).then(result => {
+                console.log(result);
+                alert("login efetuado com sucesso");
+                switch (result.tipo) {
+                    case "administrador":
+                        window.location.replace("/main.html");
+                        break;
+                    case "utilizador":
+                        window.location.replace("/single.html");
+                        break;
+                    default:
+                        alert("Tipo de utilizador inválido");
+                }
+
+            }).catch(error => {
+                swal({ title: `${result.value.err_message}` })
+            }).catch(error => {
+                alert("Erro ao fazer login!");
+            });
+        });
+
+        </script>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
