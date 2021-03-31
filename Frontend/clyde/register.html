@@ -240,49 +240,39 @@
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-	<script>
+<script>
+    console.log("script");
 
-        console.log("Script");
+    const btnRegisto = document.getElementById("btnReg")
 
-        const btnLogin = document.getElementById("btnLog")
-        $(".modal-backdrop").remove();
-        $( "#btnLog" ).on( "click", function() {
-            console.log("...");
-            var data = {};
-            data.email = document.getElementById("email").value;
-            data.password = document.getElementById("password").value;
+    btnRegisto.addEventListener('click', function(){
+    var data = {};
+    data.email = document.getElementById("emailReg").value;
+    data.password = document.getElementById("password_Registo").value;
+    data.firstname = document.getElementById("first_name").value;
+    data.lastname = document.getElementById("last_name").value;
+    data.tipo = "Utilizador";
+    data.username = document.getElementById("morada").value;
+    console.log(data); //debugging para ver os dados que foram enviados
 
-            fetch('http://localhost:8080/signin', {
-                headers: { 'Content-Type': 'application/json' },
-                method: 'POST',
-                body: JSON.stringify(data)
-            }).then(response => {
-                if (!response.ok) {
-                    throw new Error(response.statusText);
-                }
-                return response.json();
-            }).then(result => {
-                console.log(result);
-                alert("login efetuado com sucesso");
-                switch (result.tipo) {
-                    case "administrador":
-                        window.location.replace("/main.html");
-                        break;
-                    case "utilizador":
-                        window.location.replace("/single.html");
-                        break;
-                    default:
-                        alert("Tipo de utilizador inválido");
-                }
+    //chamada fetch para envio dos dados para o servior via POST
 
-            }).catch(error => {
-                swal({ title: `${result.value.err_message}` })
-            }).catch(error => {
-                alert("Erro ao fazer login!");
-            });
-        });
-
-        </script>
+    fetch('http://localhost:8080/signup', {
+    headers: { 'Content-Type': 'application/json' },
+    method: 'POST',
+    body: JSON.stringify(data)
+    }).then(response => {
+    if (!response.ok) {
+    throw new Error(response.statusText);
+    }
+    return response.json();
+    })
+    .catch(error => {
+    swal({title: `${result.value.err_message}`})
+    });
+    alert("Registo efetuado  com sucesso!");
+    });
+</script>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -295,10 +285,11 @@
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/jquery.animateNumber.min.js"></script>
 		<script src="js/scrollax.min.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
 		<script src="js/google-map.js"></script>
 		
 		<script src="js/main.js"></script>
-		
+
 	</body>
 	</html>
