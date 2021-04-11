@@ -110,7 +110,7 @@
                     </div><!-- /.content-block -->
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-8">
-                    <form action="" class="booking-form-one">
+                    <form role="form" action="/signup" method="post" class="booking-form-one">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-holder">
@@ -161,7 +161,7 @@
                             </div><!-- /.col-lg-6 -->
                             <div class="col-lg-6">
                                 <div class="input-holder">
-                                    <button type="submit" name="submit" id="btnReg">Registar</button>
+                                    <button type="submit" name="submit" id="btnReg1">Registar</button>
                                 </div><!-- /.input-holder -->
                             </div><!-- /.col-lg-6 -->
                         </div><!-- /.row -->
@@ -243,9 +243,11 @@
 <script>
     console.log("script");
 
-    const btnRegisto = document.getElementById("btnReg")
+    const btnRegisto = document.getElementById("btnReg1")
+
 
     btnRegisto.addEventListener('click', function(){
+
     var data = {};
     data.email = document.getElementById("emailReg").value;
     data.password = document.getElementById("password_Registo").value;
@@ -271,6 +273,7 @@
     swal({title: `${result.value.err_message}`})
     });
     alert("Registo efetuado  com sucesso!");
+    window.location.replace("/single.html");
     });
 </script>
 
