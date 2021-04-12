@@ -7,4 +7,4 @@ const controllerSearch = require('../controllers/search.controller.js');
 
 module.exports = router;
 
-router.post('/search/', controllerSearch.NOME_DO_METODO_NO_CONTROLLER);
+// router.post('/search/', controllerSearch.NOME_DO_METODO_NO_CONTROLLER);
