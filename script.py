@@ -19,7 +19,7 @@ scholarly.use_proxy(pg)
 
 
 # Hipótese 1 - Autores com interesse igual ao do tópico procurado e as suas publicaçõe:
-
+topic = "covid"
 search_interests = scholarly.search_keyword(topic)
 interesse = scholarly.fill(next(search_interests))
 json_author1 = interesse['scholar_id']
