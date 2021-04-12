@@ -14,8 +14,8 @@ pg.FreeProxies()
 scholarly.use_proxy(pg)
 
 # Input do tópico de interesse
-print("Welcome! Insert a topic of your interest: ")
-topic = input()
+#print("Welcome! Insert a topic of your interest: ")
+#topic = input()
 
 
 # Hipótese 1 - Autores com interesse igual ao do tópico procurado e as suas publicaçõe:
@@ -92,6 +92,7 @@ def most_frequent(emails):
             num = i
 
     return num
-#visual studio test
+# visual studio test
+
 
 print("Email do Researcher:", most_frequent(emails))
