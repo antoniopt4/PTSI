@@ -20,6 +20,8 @@ app.use(expressValidator());
 // servir front-end
 app.use(express.static('../conexi-html-files'))
 app.use(express.static('../Painel'))
+app.set('view engine', 'ejs');
+app.use( '/Frontend',express.static('../Frontend/clyde'));
 
 app.listen(port, function (err) {
     if (!err) {
