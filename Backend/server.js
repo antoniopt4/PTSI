@@ -21,6 +21,10 @@ app.use(expressValidator());
 app.use(express.static('../conexi-html-files'))
 app.use(express.static('../Painel'))
 
+//motor de renderização
+app.set('view engine', 'ejs');
+app.use( '/Frontend',express.static('../Frontend/clyde'));
+
 app.listen(port, function (err) {
     if (!err) {
         console.log('Your app is listening on ' + host + ' and port ' + port);
