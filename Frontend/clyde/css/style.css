@@ -9899,3 +9899,41 @@ textarea.form-control {
             background-color: #fff;
             color: #111111;
         }
+
+
+
+.section {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1170px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.content-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    min-height: 600px;
+}
+
+.content {
+    display: table-cell;
+    width: 100%;
+    vertical-align: middle;
+}
