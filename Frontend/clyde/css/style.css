@@ -307,7 +307,7 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 4.5rem; }
 
 h2, .h2 {
   font-size: 2rem; }
@@ -2271,8 +2271,8 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5); }
 
 .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff; }
+  color: white;
+  border-color: white; }
   .btn-outline-primary:hover {
     color: #fff;
     background-color: #007bff;
@@ -8719,7 +8719,7 @@ h1, h2, h3, h4, h5,
 
 .btn {
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 500;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

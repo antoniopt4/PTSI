@@ -4,10 +4,8 @@
     "\\Backend",
     "\\Frontend",
     "\\Frontend\\clyde",
-    "\\Frontend\\clyde\\css",
-    "\\Frontend\\clyde\\js",
-    "\\Frontend\\clyde\\scss\\bootstrap"
+    "\\Frontend\\clyde\\css"
   ],
-  "SelectedNode": "\\Frontend\\clyde\\js\\main.js",
+  "SelectedNode": "\\Frontend\\clyde\\index.html",
   "PreviewInSolutionExplorer": false
 }
