@@ -3,8 +3,9 @@
     "",
     "\\Backend",
     "\\Frontend",
-    "\\Frontend\\clyde"
+    "\\Frontend\\clyde",
+    "\\Frontend\\clyde\\css"
   ],
-  "SelectedNode": "\\Frontend",
+  "SelectedNode": "\\Frontend\\clyde\\index.html",
   "PreviewInSolutionExplorer": false
 }
