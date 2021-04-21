@@ -92,14 +92,14 @@
                     </div><!-- /.content-block -->
                 </div><!-- /.col-lg-4 -->
                 <div class="col-lg-8">
-                    <form role="form" action="/search" method="post" class="booking-form-one">
+                    <form role="form"  method="post" class="booking-form-one">
                         <div class="row">
                             
                            
                             
                             <div class="col-lg-6"></div>
                                 <div class="input-holder">
-                                    <input type="text" name="srch" id="srch" placeholder="Search" required>
+                                    <input type="text" name="s" id="s" placeholder="Search" required>
                                 </div><!-- /.input-holder -->
                             </div><!-- /.col-lg-6 -->
                            
@@ -205,5 +205,38 @@
 		
 		<script src="js/main.js"></script>
 
+
+<script>
+    console.log("script3");
+
+    const btnSearch = document.getElementById("btnSearch")
+	
+    btnSearch.addEventListener('click', function(){
+	var data = {};
+	data.name = document.getElementById("s").value;
+	console.log(data);
+    console.log("script2");
+
+	
+    //chamada fetch para envio dos dados para o servior via POST
+	
+     fetch('http://127.0.0.1:5000/test', {
+       	headers: { 'Content-Type': 'application/json' },
+	    method: 'POST',
+        body: JSON.stringify(data)       
+    }).then(response => {
+    if (!response.ok) {
+    throw new Error(response.statusText);
+    }
+    return response.json();
+    })
+    .catch(error => {
+    swal({title: `${result.value.err_message}`})
+    });
+    alert("Registo efetuado  com sucesso!");
+    window.location.replace("/single.html");
+    });
+
+</script>
 	</body>
 	</html>
