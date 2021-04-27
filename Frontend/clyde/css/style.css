@@ -2039,6 +2039,11 @@ textarea.form-control {
     width: 100px;
     float: none;
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
 }
 
 
