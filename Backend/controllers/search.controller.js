@@ -3,15 +3,14 @@ var request = require('request-promise');
 async function getFlaskd(req,res) {
 
     var data = { 
-        data1: "foo", 
-        data2: "bar",
-    //dado que vem do campo "search" do frontend
-        nome: req.body.nome
+        
+    
+        nome: req.body.nome   //dado que vem do form do frontend
     } 
 
     var options = { 
         method: 'POST', 
-        uri: 'http://127.0.0.1:5000/testmeco', 
+        uri: 'http://127.0.0.1:5000/searchRoute', 
         body: data, 
         json: true // Automatically stringifies the body to JSON 
     }; 
