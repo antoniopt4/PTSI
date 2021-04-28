@@ -5,7 +5,7 @@ async function getFlaskd(req,res) {
     var data = { 
         
     
-        nome: req.body.nome   //dado que vem do form do frontend
+        topico: req.body.nome   //dado que vem do form do frontend
     } 
 
     var options = { 
