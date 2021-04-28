@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Skillfun8/PTSI#readme",
   "dependencies": {
+    "axios": "^0.21.1",
     "bcrypt-nodejs": "0.0.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
@@ -29,6 +30,8 @@
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
     "sequelize": "^6.5.1"
   }
 }

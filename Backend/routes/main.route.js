@@ -7,7 +7,10 @@ const controllerSearch = require('../controllers/search.controller.js');
 
 module.exports = router;
 
-// router.post('/search/', controllerSearch.NOME_DO_METODO_NO_CONTROLLER);
+router.post('/testmeco/', controllerSearch.getFlaskd);
 
-router.get('/teste', function(req,res){
+router.get('/testmeco', function(req,res){
     res.render('index')});
+
+
+module.exports = router;
