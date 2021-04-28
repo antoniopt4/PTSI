@@ -5,6 +5,7 @@ async function getFlaskd(req,res) {
     var data = { 
         data1: "foo", 
         data2: "bar",
+    //dado que vem do campo "search" do frontend
         nome: req.body.nome
     } 
 
