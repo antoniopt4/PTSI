@@ -1,16 +1,16 @@
 var request = require('request-promise'); 
 
-async function getFlaskd(req,res) {
+async function srchTop(req,res) {
 
     var data = { 
         
     
-        topico: req.body.topico   //dado que vem do form do frontend
+        topico: req.body.topico   //Tópico que vem do form do frontend
     } 
 
     var options = { 
         method: 'POST', 
-        uri: 'http://127.0.0.1:5000/searchRoute', 
+        uri: 'http://127.0.0.1:5000/searchTopic', 
         body: data, 
         json: true // Automatically stringifies the body to JSON 
     }; 
@@ -33,6 +33,6 @@ async function getFlaskd(req,res) {
 //Export functions
 module.exports = {
 
-   getFlaskd: getFlaskd
+    srchTop: srchTop
 
 };
