@@ -1,16 +1,16 @@
 var request = require('request-promise'); 
 
-async function srchID(req,res) {
+async function srchProfile(req,res) {
 
     var data = { 
         
     
-        ID: req.body.ID   //ID que vem do form do frontend
+        AuthorID: req.body.AuthorID   //ID que vem do form do frontend
     } 
 
     var options = { 
         method: 'POST', 
-        uri: 'http://127.0.0.1:5000/searchID', 
+        uri: 'http://127.0.0.1:5000/searchProfile', 
         body: data, 
         json: true // Automatically stringifies the body to JSON 
     }; 
@@ -33,6 +33,6 @@ async function srchID(req,res) {
 //Export functions
 module.exports = {
 
-    srchID: srchID
+    srchProfile: srchProfile
 
 };
