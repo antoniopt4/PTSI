@@ -61,7 +61,7 @@ async function main() {
         await client.connect();
 
         
-        await findProfiles(client);
+       
         
 
     
@@ -74,7 +74,7 @@ async function main() {
 main().catch(console.error);
 
 // Add functions that make DB calls here
-
+/*
 //Read Function
 async function findProfiles(client) {
   
@@ -87,3 +87,4 @@ async function findProfiles(client) {
         console.log(`No results found!`);
     }
 }
+*/
